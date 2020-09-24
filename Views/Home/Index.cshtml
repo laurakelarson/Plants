@@ -1,29 +1,55 @@
 ﻿@{
     ViewData["Title"] = "Plants and Paws";
 }
+<style>
+    .container {
+        position: relative;
+        text-align: center;
+        color: white;
+    }
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        display: block; /* remove extra space below image */
+    }
+    /* Centered text */
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+</style>
 
-
-<body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-        <header class="masthead mb-auto">
-            <div class="inner">
-                <h3 class="masthead-brand">Cover</h3>
-                <nav class="nav nav-masthead justify-content-center">
-                    <a class="nav-link active" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Contact</a>
-                </nav>
+    <html lang="en">
+    
+    <body class="text-center">
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10"></div>
+                <div class="col-2"></div>
             </div>
-        </header>
-
-        <main role="main" class="inner cover">
-            <h1 class="cover-heading">@ViewData["Title"]</h1>
-            <p class="lead">This website is created by Marble and Archie for their love of plants. (Please call us Bobo and Archie Bear.)</p>
-            <p class="lead">
-                <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
-            </p>
-        </main>
-
-        <footer class="mastfoot mt-auto"></footer>
-    </div>
-</body>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10">
+                    <div class="container">
+                        <img class="flex-fill" src="~/Resources/pexels-scott-webb-213727.jpg" />
+                        <div class="centered">
+                            <h1 class="cover-heading">@ViewData["Title"]</h1>
+                            <p class="lead">Welcome</p>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-10"></div>
+                <div class="col-2"></div>
+            </div>
+        </div>
+    </body>
+    </html>
