@@ -2,7 +2,28 @@
     ViewData["Title"] = "Plants and Paws";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>WE LOVE PLANTS XOXO</p>
-</div>
+
+<body class="text-center">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+        <header class="masthead mb-auto">
+            <div class="inner">
+                <h3 class="masthead-brand">Cover</h3>
+                <nav class="nav nav-masthead justify-content-center">
+                    <a class="nav-link active" href="#">Home</a>
+                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link" href="#">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main role="main" class="inner cover">
+            <h1 class="cover-heading">@ViewData["Title"]</h1>
+            <p class="lead">This website is created by Marble and Archie for their love of plants. (Please call us Bobo and Archie Bear.)</p>
+            <p class="lead">
+                <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+            </p>
+        </main>
+
+        <footer class="mastfoot mt-auto"></footer>
+    </div>
+</body>

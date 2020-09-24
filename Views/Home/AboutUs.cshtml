@@ -1,9 +1,40 @@
 ﻿@{
     ViewData["Title"] = "About Us";
 }
-<h1>@ViewData["Title"]</h1>
+    <head>
+        <style>
+            img {
+                max-width: 100%;
+                max-height: 100%;
+                display: block; /* remove extra space below image */
+            }
+        </style>
+    </head>
 
-<h2>This website is created by Marble and Archie for their love of plants.</h2>
-<h3>(Please call us Bobo and Archie Bear.)</h3>
 
-<img src="~/Resources/babies.jpg" />
+<body style="background-color: #DFDFE6">
+    <div class="container body-content">
+        <div class="row">
+            <div class="col text-center">
+                <div class="col-md-5 pt-4 py-2 mx-auto my-3">
+                    <h1 class="display-6 font-weight-normal">@ViewData["Title"]</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <img class="flex-fill" src="~/Resources/babies.jpg" />
+        </div>
+
+        <div class="row text-center">
+            <h3>This website was created by Marble and Archie for their love of plants.</h3>
+        </div>
+
+        <div class="row justify-content-center">
+            <h4>(Please call us Bobo and Archie Bear.)</h4>
+        </div>
+
+    </div>
+
+
+</body>
