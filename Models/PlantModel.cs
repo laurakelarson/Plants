@@ -17,7 +17,6 @@ namespace Plants.Models
 
         public PlantModel()
         {
-            // This is a change
         }
         public PlantModel(PlantModel data)
         {
