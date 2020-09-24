@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Resources\babies.jpg" />
+    <None Include="wwwroot\Resources\caladium.jpg" />
+    <None Include="wwwroot\Resources\dogkiss.jpg" />
+    <None Include="wwwroot\Resources\ficus.jpg" />
+    <None Include="wwwroot\Resources\hoya.jpg" />
+    <None Include="wwwroot\Resources\jade.jpg" />
+    <None Include="wwwroot\Resources\monstera2.jpg" />
+    <None Include="wwwroot\Resources\orbifolia.jpg" />
+    <None Include="wwwroot\Resources\pilea.jpg" />
+    <None Include="wwwroot\Resources\snake.jpg" />
+    <None Include="wwwroot\Resources\spider.jpg" />
+    <None Include="wwwroot\Resources\tetrasperma.jpg" />
+    <None Include="wwwroot\Resources\tineike.jpg" />
+    <None Include="wwwroot\Resources\watermelon_peperomia.jpg" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <PackageReference Include="bootstrap" Version="4.5.2" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
