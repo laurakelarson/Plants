@@ -7,11 +7,11 @@ namespace Plants.Models
 {
     public class PlantsIndexModel
     {
-        public List<PlantModel> plantsList { get; set; }
+        public List<PlantModel> PlantsList { get; set; }
 
         public PlantsIndexModel()
         {
-
+            PlantsList = Helpers.DefaultPlants.GetDefaultPlantList();
         }
     }
 }

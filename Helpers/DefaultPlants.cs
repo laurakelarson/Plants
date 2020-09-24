@@ -8,7 +8,7 @@ namespace Plants.Helpers
 {
     public static class DefaultPlants
     {
-        public static List<PlantModel> DefaultPlantList()
+        public static List<PlantModel> GetDefaultPlantList()
         {
             List<PlantModel> plants = new List<PlantModel>();
             plants.Add(Monstera());

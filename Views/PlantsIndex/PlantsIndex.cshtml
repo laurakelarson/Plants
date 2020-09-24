@@ -1,9 +1,18 @@
 ﻿@using Plants.Models;
-@model  PlantModel
+@model PlantsIndexModel
 @{
     ViewData["Title"] = "Plants Index";
 }
 
+<head>
+    <style>
+        img {
+            max-width: 110%;
+            max-height: 110%;
+            display: block; /* remove extra space below image */
+        }
+    </style>
+</head>
 
 <body>
     <div>
@@ -15,32 +24,43 @@
         </div>
 
         <div class="row text-center py-4 my-3" style="background-color:#B8B8CB;">
-            <div class="col">
-                <div class="row mx-auto">
-                    <div class="col">
-                        
-                        <br />
-                    </div>
-                </div>
+            <div class="col-10 mx-auto">
+                <table class="table table-bordered">
+                    <tbody>
+                        @foreach (var plant in Model.PlantsList)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="~/Resources/@plant.ImageURI" />
 
-                <div class="row">
+                                        </div>
+                                        <div class="col-10">
+                                            <div class="row">
+                                                <p>Common Name:  @plant.CommonName</p>
+                                            </div>
+                                            <div class="row">
+                                                <p>Scientific Name:  @plant.ScientificName</p>
+                                            </div>
+                                            <div class="row">
+                                                <p>Family:  @plant.Family</p>
+                                            </div>
 
-                </div>
-
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
             </div>
-
         </div>
 
         <div class="row text-center py-4 my-3" style="background-color:#CDCDD9;">
             <div class="col-9 mx-auto">
+                
 
-                <div>
-
-                </div>
-
-                <div class="text-center mt-2">
-
-                </div>
             </div>
         </div>
     </div>
