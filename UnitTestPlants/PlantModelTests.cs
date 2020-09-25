@@ -18,11 +18,5 @@ namespace UnitTestPlants
             PlantModel plantTest = new PlantModel();
             Assert.IsTrue(true);
         }
-
-        public void TestDefaultConstructor3()
-        {
-            PlantModel plantTest = new PlantModel();
-            Assert.IsTrue(true);
-        }
     }
 }
