@@ -12,5 +12,10 @@ namespace Plants.Controllers
         {
             return View();
         }
+
+        public IActionResult UpdatePlant()
+        {
+            return View();
+        }
     }
 }
