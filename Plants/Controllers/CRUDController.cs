@@ -17,5 +17,10 @@ namespace Plants.Controllers
         {
             return View();
         }
+
+        public IActionResult ReadPlant()
+        {
+            return View();
+        }
     }
 }
