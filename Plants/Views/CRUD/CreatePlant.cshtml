@@ -1,0 +1,55 @@
+﻿@model Plants.Models.PlantModel
+
+@{
+    ViewData["Title"] = "CreatePlant";
+}
+
+<h1>CreatePlant</h1>
+
+<h4>PlantModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreatePlant">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ScientificName" class="control-label"></label>
+                <input asp-for="ScientificName" class="form-control" />
+                <span asp-validation-for="ScientificName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CommonName" class="control-label"></label>
+                <input asp-for="CommonName" class="form-control" />
+                <span asp-validation-for="CommonName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Family" class="control-label"></label>
+                <input asp-for="Family" class="form-control" />
+                <span asp-validation-for="Family" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Category" class="control-label"></label>
+                <input asp-for="Category" class="form-control" />
+                <span asp-validation-for="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageURI" class="control-label"></label>
+                <input asp-for="ImageURI" class="form-control" />
+                <span asp-validation-for="ImageURI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
