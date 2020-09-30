@@ -22,5 +22,10 @@ namespace Plants.Controllers
         {
             return View();
         }
+
+        public IActionResult DeletePlant()
+        {
+            return View();
+        }
     }
 }
