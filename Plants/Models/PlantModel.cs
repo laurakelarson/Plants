@@ -8,6 +8,7 @@ namespace Plants.Models
 {
     public class PlantModel
     {
+        public int Id { get; set; }
         public String ScientificName { get; set; }
         public String CommonName { get; set; }
         public String Family { get; set; }
