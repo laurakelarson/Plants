@@ -92,6 +92,19 @@ namespace Plants.Views.CRUDI
             {
                 return NotFound();
             }
+            var categories = new List<SelectListItem>();
+            foreach (CategoryEnum cat in Enum.GetValues(typeof(CategoryEnum)))
+            {
+                categories.Add(new SelectListItem { Text = cat.ToString(), Value = cat.ToString() });
+            }
+
+            var durations = new List<SelectListItem>();
+            foreach (DurationEnum dur in Enum.GetValues(typeof(DurationEnum)))
+            {
+                durations.Add(new SelectListItem { Text = dur.ToString(), Value = dur.ToString() });
+            }
+            ViewBag.CategoryEnums = categories;
+            ViewBag.DurationEnums = durations;
             return View(plantModel);
         }
 
