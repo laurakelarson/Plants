@@ -4,62 +4,74 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+    <head>
+        <style>
+            img {
+                max-width: 100%;
+                max-height: 110%;
+                display: block; /* remove extra space below image */
+            }
+        </style>
+    </head>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ScientificName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CommonName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Family)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Category)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Duration)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageURI)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ScientificName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CommonName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Family)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Duration)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ImageURI)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+
+<body>
+    <div>
+        <div class="text-center row my-3" style="background-color:#9695B5;">
+            <div class="col-md-5 p-1 mx-auto no-gutters">
+                <h1 class="display-4 font-weight-normal">@ViewData["Title"]</h1>
+            </div>
+        </div>
+
+        <div class="row text-center py-4 my-3" style="background-color:#B8B8CB;">
+            <div class="col-10 mx-auto">
+                <div class="row">
+                    <div class="form-group">
+                        <a asp-action="Create" class="btn btn-primary">Create New</a> 
+                    </div>
+                </div>
+
+                <table class="table table-bordered">
+                    <tbody>
+                        @foreach (var plant in Model)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-5">
+                                            <img src="~/Resources/@plant.ImageURI" />
+
+                                        </div>
+                                        <div class="col-7">
+                                            <div class="row">
+                                                <p>Common Name:  @plant.CommonName</p>
+                                            </div>
+                                            <div class="row">
+                                                <p>Scientific Name:  @plant.ScientificName</p>
+                                            </div>
+                                            <div class="row">
+                                                <p>Family:  @plant.Family</p>
+                                            </div>
+                                            <div class="row">
+                                                <p>Category:  @plant.Category</p>
+                                            </div>
+                                            <div class="row">
+                                                <p>Duration:  @plant.Duration</p>
+                                            </div>
+                                            <div class="row">
+                                                <a asp-action="Edit" asp-route-id="@plant.Id">Edit</a>  |
+                                                <a asp-action="Details" asp-route-id="@plant.Id">Details</a>  |
+                                                <a asp-action="Delete" asp-route-id="@plant.Id">Delete</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</body>
